@@ -58,6 +58,32 @@ cd mechrevo-16pro-cpu-temp-fix
 | 🔍 `Check_Thermal.bat` | 只读自查：电源方案 → 加速模式/最小状态/实时频率 → 温度传感器卡滞检测 → 自动判定 | **第一步永远是它** |
 | 🧊 `Night_Cooling.bat` | 关闭涡轮加速 + 频率地板 5% → 温度降到 60~75°C，风扇安静 | 跑测试、挂机、过夜 |
 | ⚡ `Restore_CPU_Boost.bat` | 恢复满血加速 | 打游戏、重负载前 |
+| 🖥️ `ThermalDoctor.bat` | 一体化控制台：菜单整合诊断 / 切换 / 实时监控 | 想一个工具全搞定 |
+
+### 进阶：ThermalDoctor 一体化控制台
+
+不想在脚本间来回切换？双击 **`ThermalDoctor.bat`**（UAC 点"是"）：
+
+```
+================================================
+   Jiaolong Thermal Doctor  v1.1
+================================================
+   [1] Diagnose now (read-only)
+   [2] Switch to COOL mode  (boost off, quiet)
+   [3] Switch to BOOST mode (full speed, gaming)
+   [4] Live monitor (Ctrl+C to stop)
+   [5] About / how to read results
+   [0] Exit
+```
+
+进阶用户和 Agent 可以带参数直接调用，适合写进自动化流程：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File ThermalDoctor.ps1 -Action diagnose
+# -Action: diagnose | cool | boost | monitor
+```
+
+每次修改设置后都会自动回读注册表实际值确认生效，不靠"应该没问题"。
 
 ## 先自查再动手
 

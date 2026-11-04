@@ -3,6 +3,14 @@
 本项目的所有显著变更都会记录在这个文件里。
 格式参考 [Keep a Changelog](https://keepachangelog.com/)，版本号遵循语义化版本。
 
+## [1.1.0] - 2026-11-05
+
+### Added
+
+- `ThermalDoctor.ps1` / `ThermalDoctor.bat`：一体化控制台——菜单式诊断 / 低温模式 / 满血模式 / 实时监控（时钟、占用、ACPI 温度），支持 `-Action diagnose|cool|boost|monitor` 参数化调用，便于自动化流程与 Agent 集成；每次写入后自动回读注册表验证
+- `.github/ISSUE_TEMPLATE/thermal-report.yml`：结构化温度反馈 Issue 表单（强制附 Check_Thermal.bat 输出，用于扩充适用范围数据库）
+- README 徽章与 Releases 下载入口
+
 ## [1.0.0] - 2026-11-05
 
 首个正式版本。基于 2026-11-04 在蛟龙16 Pro（R7 7745HX + RTX 4070，Windows 11 build 26200）上的完整实测诊断。
