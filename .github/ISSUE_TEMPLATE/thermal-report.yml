@@ -1,0 +1,49 @@
+name: 温度问题反馈 / Thermal report
+description: 提交 Check_Thermal.bat 的输出，帮助扩充适用范围数据库
+title: "[机型] 一句话描述你的情况"
+labels: ["thermal-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！**请务必先运行仓库里的 `Check_Thermal.bat` 并粘贴完整输出**——
+        没有这份数据无法定位你属于哪种情况。它只读不改，放心运行。
+  - type: input
+    id: model
+    attributes:
+      label: 机型与配置
+      description: 例：蛟龙16 Pro / R7 7745HX + RTX 4070 Laptop
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Windows 版本
+      description: 例：Windows 11 24H2 (build 26100)。winver 命令可查。
+    validations:
+      required: true
+  - type: dropdown
+    id: cc-mode
+    attributes:
+      label: 控制中心当前性能模式
+      options:
+        - 狂飙模式
+        - 游戏模式
+        - 办公模式
+        - 自定义模式
+        - 没有/其他品牌/不确定
+    validations:
+      required: true
+  - type: textarea
+    id: check-output
+    attributes:
+      label: Check_Thermal.bat 完整输出
+      description: 复制窗口里的全部文字（从第一行到 VERDICT 之后）
+      placeholder: 粘贴到这里
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: 补充说明（可选）
+      description: 控制中心温度曲线截图、已尝试过的操作、问题发生场景等

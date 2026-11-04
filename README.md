@@ -9,6 +9,7 @@
 ![CPU](https://img.shields.io/badge/Ryzen%207-7745HX-ED1C24?logo=amd&logoColor=white)
 ![GPU](https://img.shields.io/badge/GeForce-RTX%204070%20Laptop-76B900?logo=nvidia&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
+![Release](https://img.shields.io/github/v/release/Nina-noSchool/mechrevo-16pro-cpu-temp-fix)
 ![实测](https://img.shields.io/badge/实测-蛟龙16_Pro-success)
 
 **[快速开始](#快速开始) · [根因解析](#根因三层叠加) · [自查判定](#先自查再动手) · [Agent Skill](#让-ai-agent-替你排查) · [FAQ](#faq)**
@@ -47,7 +48,7 @@ git clone https://github.com/Nina-noSchool/mechrevo-16pro-cpu-temp-fix.git
 cd mechrevo-16pro-cpu-temp-fix
 ```
 
-或者直接 **Code → Download ZIP**。然后：
+或者到 **[Releases](https://github.com/Nina-noSchool/mechrevo-16pro-cpu-temp-fix/releases/latest)** 下载稳定版。然后：
 
 1. 双击 **`Check_Thermal.bat`**（只读不改任何东西，UAC 点"是"）→ 看 `VERDICT` 判定
 2. 按判定双击对应脚本 → 窗口里显示注册表读回的实际值，**亲眼确认生效**
