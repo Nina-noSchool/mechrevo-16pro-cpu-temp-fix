@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Mechrevo Jiaolong 16 Pro CPU temperature fix - 97C to 74C">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#14224a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+    <radialGradient id="glowHot" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ef4444" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#ef4444" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowCool" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#34d399" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#34d399" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowCyan" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="300" rx="18" fill="url(#bg)"/>
+  <circle cx="872" cy="150" r="120" fill="url(#glowHot)"/>
+  <circle cx="1064" cy="150" r="120" fill="url(#glowCool)"/>
+  <circle cx="180" cy="30" r="220" fill="url(#glowCyan)"/>
+
+  <g stroke="#1e293b" stroke-width="1" opacity="0.55">
+    <line x1="64" y1="244" x2="620" y2="244"/>
+    <line x1="64" y1="36" x2="700" y2="36"/>
+  </g>
+
+  <text x="64" y="78" fill="#38bdf8" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="18" letter-spacing="3" font-weight="600">MECHREVO JIAOLONG 16 PRO · R7 7745HX</text>
+  <text x="64" y="142" fill="#f8fafc" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="52" font-weight="700">CPU 高温一键修复</text>
+  <text x="64" y="190" fill="#94a3b8" font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="22">占用 17% · 温度 97°C · 风扇 84% —— 问题不在负载，在配置</text>
+
+  <g font-family="Microsoft YaHei, Segoe UI, sans-serif" font-size="17">
+    <rect x="64" y="216" width="132" height="34" rx="17" fill="none" stroke="#22d3ee" stroke-width="1.4"/>
+    <text x="130" y="238" fill="#67e8f9" text-anchor="middle">只读自查</text>
+    <rect x="212" y="216" width="132" height="34" rx="17" fill="none" stroke="#a78bfa" stroke-width="1.4"/>
+    <text x="278" y="238" fill="#c4b5fd" text-anchor="middle">一键温控</text>
+    <rect x="360" y="216" width="152" height="34" rx="17" fill="none" stroke="#f472b6" stroke-width="1.4"/>
+    <text x="436" y="238" fill="#f9a8d4" text-anchor="middle">Agent Skill</text>
+  </g>
+
+  <g font-family="Segoe UI, Microsoft YaHei, sans-serif">
+    <circle cx="872" cy="150" r="58" fill="none" stroke="#334155" stroke-width="10"/>
+    <circle cx="872" cy="150" r="58" fill="none" stroke="#ef4444" stroke-width="10" stroke-linecap="round"
+            stroke-dasharray="353.5 364.4" transform="rotate(-90 872 150)"/>
+    <text x="872" y="147" fill="#fca5a5" font-size="34" font-weight="700" text-anchor="middle">97°C</text>
+    <text x="872" y="177" fill="#94a3b8" font-size="15" text-anchor="middle">修复前</text>
+
+    <line x1="946" y1="150" x2="984" y2="150" stroke="#64748b" stroke-width="3"/>
+    <path d="M 984 143 L 996 150 L 984 157 Z" fill="#64748b"/>
+
+    <circle cx="1064" cy="150" r="58" fill="none" stroke="#334155" stroke-width="10"/>
+    <circle cx="1064" cy="150" r="58" fill="none" stroke="#34d399" stroke-width="10" stroke-linecap="round"
+            stroke-dasharray="269.7 364.4" transform="rotate(-90 1064 150)"/>
+    <text x="1064" y="147" fill="#6ee7b7" font-size="34" font-weight="700" text-anchor="middle">74°C</text>
+    <text x="1064" y="177" fill="#94a3b8" font-size="15" text-anchor="middle">修复后</text>
+
+    <text x="968" y="248" fill="#64748b" font-size="17" text-anchor="middle" font-family="Microsoft YaHei, Segoe UI, sans-serif">风扇 5037 → 3461 RPM · 突发性能 −20~30%</text>
+  </g>
+
+  <rect x="40" y="284" width="1120" height="5" rx="2.5" fill="url(#accent)"/>
+</svg>
