@@ -3,6 +3,16 @@
 本项目的所有显著变更都会记录在这个文件里。
 格式参考 [Keep a Changelog](https://keepachangelog.com/)，版本号遵循语义化版本。
 
+## [2.0.0] - 2026-11-08
+
+### Added
+
+- `ThermalCenter.ps1` / `ThermalCenter.bat`：**蛟龙温控中心** —— WPF 图形界面
+  - 暗色控制中心风格：四张实时状态卡片（温度 / 时钟 / 占用 / 加速），2 秒自动刷新
+  - 一键「低温模式」「满血模式」「深度诊断」，写入后自动回读注册表验证
+  - 日志区记录全部操作与判定；异常崩溃自动写 `%TEMP%\thermal-center-crash.log`
+  - PowerShell + WPF 实现：零编译、零依赖、约 13KB，规避未签名 exe 的杀软误报问题
+
 ## [1.1.0] - 2026-11-05
 
 ### Added

@@ -58,7 +58,8 @@ cd mechrevo-16pro-cpu-temp-fix
 | 🔍 `Check_Thermal.bat` | 只读自查：电源方案 → 加速模式/最小状态/实时频率 → 温度传感器卡滞检测 → 自动判定 | **第一步永远是它** |
 | 🧊 `Night_Cooling.bat` | 关闭涡轮加速 + 频率地板 5% → 温度降到 60~75°C，风扇安静 | 跑测试、挂机、过夜 |
 | ⚡ `Restore_CPU_Boost.bat` | 恢复满血加速 | 打游戏、重负载前 |
-| 🖥️ `ThermalDoctor.bat` | 一体化控制台：菜单整合诊断 / 切换 / 实时监控 | 想一个工具全搞定 |
+| 🖥️ `ThermalDoctor.bat` | 一体化命令行控制台：菜单整合诊断 / 切换 / 实时监控 | 想一个工具全搞定 |
+| 🪟 `ThermalCenter.bat` | **图形温控中心**：实时状态卡片 + 一键切换 + 深度诊断 | 喜欢图形界面的用户 |
 
 ### 进阶：ThermalDoctor 一体化控制台
 
@@ -84,6 +85,19 @@ powershell -NoProfile -ExecutionPolicy Bypass -File ThermalDoctor.ps1 -Action di
 ```
 
 每次修改设置后都会自动回读注册表实际值确认生效，不靠"应该没问题"。
+
+### 图形版：蛟龙温控中心
+
+双击 **`ThermalCenter.bat`**（UAC 点"是"），控制中心风格的暗色界面：
+
+- **四张实时状态卡**：CPU 温度 / 时钟 / 占用 / 涡轮加速，每 2 秒自动刷新
+- **三键操作**：低温模式 / 满血模式 / 深度诊断（完整判定报告写入日志区）
+- 所有修改自动回读注册表验证，日志区可见每一步操作与结果
+- 温度读数来自 ACPI 传感器（部分批次会锁存失真），**以蛟龙控制中心显示为准**
+- 极少数情况下若界面异常崩溃，日志写在 `%TEMP%\thermal-center-crash.log`
+
+> 技术上它是 PowerShell + WPF（Windows 自带组件），单文件约 13KB，零编译、
+> 零依赖——这也是它不会像未签名 exe 那样触发杀软误报的原因。
 
 ## 先自查再动手
 
